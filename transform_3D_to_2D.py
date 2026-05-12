@@ -105,7 +105,7 @@ for pos in positions:
             mask  = correct_cell_bottom(mask) 
 
         # compute and save height
-        im_heights = compute_height(mask, method=args.method) * 1000
+        im_heights = compute_height(mask, method=args.method) * 100
         imageio.imwrite(f"{height_dir}{os.sep}{out_name}_heights.tiff", np.array(im_heights, dtype=np.uint16))
 
         # compute and save refractive index average in z
