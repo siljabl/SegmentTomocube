@@ -1,15 +1,14 @@
-import numpy as np  # numerics
-import math as math  # math
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.metrics import roc_curve, auc
-from sklearn.metrics import precision_recall_curve
-import random
-import pickle
-from xgboost import XGBClassifier
-from catboost import CatBoostClassifier
-from catboost import (CatBoostRegressor, Pool, sum_models,to_classifier)
-from skimage.feature import multiscale_basic_features
+# import random
+# import pickle
+import numpy as np
+# import math as math  # math
+
+# from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+# from sklearn.metrics import roc_curve, auc, precision_recall_curve
+# from xgboost import XGBClassifier
+# from catboost import CatBoostClassifier
+# from catboost import (CatBoostRegressor, Pool, sum_models,to_classifier)
+# from skimage.feature import multiscale_basic_features
 
 
 class MlModel:
@@ -73,7 +72,7 @@ def detect_bioM_FL_MlMod_lowRam(stack, model, return_prob=False):
                 mask.append(np.array(prob_i_tmp>thresholds[t],dtype=np.uint8))
             else:
                 mask[-1][prob_i_tmp>thresholds[t]]=t+1
-        #print(mask[-1].shape)
+        
         N = N+1
     mask = np.array(mask)
     prob = np.array(prob)
