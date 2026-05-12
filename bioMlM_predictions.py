@@ -40,14 +40,15 @@ model = pickle.load(model_file)
 clf = model.clf
 
 
-in_path  = Path(directory)
-out_path = f"{Path(directory).parent}{os.sep}predictions"
+in_path  = Path(f"{directory}raw/")
+out_path = f"{directory}predictions/"
 try:
     os.mkdir(out_path)
 except:
     pass
 
-with open(f"{out_path}{os.sep}log.txt", "a") as log:
+
+with open(f"{out_path}log.txt", "a") as log:
     log.write(f"date: {datetime.today().strftime('%Y-%m-%d')}\n")
 
     for file in in_path.glob(args.file_ending):
