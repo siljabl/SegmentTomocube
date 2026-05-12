@@ -1,0 +1,6 @@
+# Files
+*.pic
+
+# Folders
+venv/
+src/__pycache__/
