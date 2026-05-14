@@ -104,7 +104,7 @@ for pos in positions:
 
         # compute and save refractive index average in z
         im_n_avrg = refractive_index_uint16(stack, mask)
-        imageio.imwrite(f"{ri_dir}{os.sep}{out_name}_sum_refractive.tiff", np.array(im_n_avrg,  dtype=np.uint32))
+        imageio.imwrite(f"{ri_dir}{os.sep}{out_name}_mean_refractive.tiff", np.array(im_n_avrg,  dtype=np.uint16))
 
 
 

@@ -46,4 +46,4 @@ def refractive_index_uint16(stack, mask):
     ridx_sum[height <= 0] = 0
     ridx_avrg[height <= 0] = 0
 
-    return np.array(ridx_sum, dtype=np.uint32)
+    return np.array(ridx_avrg, dtype=np.uint16)
