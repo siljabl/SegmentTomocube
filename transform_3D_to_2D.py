@@ -53,8 +53,7 @@ def correct_cell_bottom(mask, full_tile_size=958):
 parser = argparse.ArgumentParser(description='Compute cell properties from segmented data')
 parser.add_argument('dir',             type=str, help="path to main dir")
 parser.add_argument('-m', '--method',  type=str, help="method for computing heights. 'sum' or 'diff'", default='sum')
-parser.add_argument('-s', '--scaling', type=int, help="value that Tomocube data is scaled with",       default=10_000)
-parser.add_argument('-t', '--tiles',   action="store_true", help="True if data consists of several tiles")
+# parser.add_argument('-t', '--tiles',   action="store_true", help="True if data consists of several tiles")
 args = parser.parse_args()
 
 # n_cell = 13800
@@ -88,21 +87,16 @@ for file in path.glob("*_HT3D_0_mask.tiff"):
 assert len(positions) > 0
 for pos in positions:
 
-    print(f"\nComputing histogram for {pos} ...")
-
     refractive_index_arr = []
     for file in path.glob(f"{pos}*"):
         stack_name = f"{path.parent}{os.sep}raw{os.sep}{file.name.split('_mask.tiff')[0]}.tiff"
         out_name   = file.name.split("_mask.tiff")[0]
 
-        print(stack_name)
-        print(out_name)
-
         # load stacks
         stack = commonStackReader(stack_name)
         mask  = commonStackReader(file)
-        if args.tiles:
-            mask  = correct_cell_bottom(mask) 
+        #if args.tiles:
+        mask  = correct_cell_bottom(mask) 
 
         # compute and save height
         im_heights = compute_height(mask, method=args.method) * 100
@@ -110,7 +104,7 @@ for pos in positions:
 
         # compute and save refractive index average in z
         im_n_avrg = refractive_index_uint16(stack, mask)
-        imageio.imwrite(f"{ri_dir}{os.sep}{out_name}_mean_refractive.tiff", np.array(im_n_avrg,  dtype=np.uint16))
+        imageio.imwrite(f"{ri_dir}{os.sep}{out_name}_sum_refractive.tiff", np.array(im_n_avrg,  dtype=np.uint32))
 
 
 
