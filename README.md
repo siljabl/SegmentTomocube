@@ -2,7 +2,7 @@
 Code to extract 2D height and refractive index fields from 3D QPI images of epithelial monolayers. 
 
 ## Used in:
-- [_Quantitative Phase Imaging of Epithelial Monolayer Dynamics_](https://www.biorxiv.org/content/10.64898/2026.01.17.700037v1))
+- [_Quantitative Phase Imaging of Epithelial Monolayer Dynamics_](https://www.biorxiv.org/content/10.64898/2026.01.17.700037v1)
 - [_Three Dimensional Dynamics of Epithelial Monolayers_](https://www.biorxiv.org/content/10.64898/2026.03.10.710903v1.abstract)
 
 
