@@ -26,15 +26,15 @@
      inkscape:document-units="mm"
      showgrid="true"
      showguides="false"
-     inkscape:zoom="0.9598442"
-     inkscape:cx="43.757101"
-     inkscape:cy="495.3929"
+     inkscape:zoom="1.3574247"
+     inkscape:cx="513.47232"
+     inkscape:cy="328.93169"
      inkscape:window-width="3440"
      inkscape:window-height="1403"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer6"
      inkscape:lockguides="true"><inkscape:grid
        type="xygrid"
        id="grid7431"
@@ -2469,6 +2469,13 @@
      id="layer6"
      inkscape:label="layout"
      transform="translate(-66.470311,-2.3680356)"><rect
+       style="opacity:1;fill:#ffffff;stroke-width:0.264583;stroke-miterlimit:2;fill-opacity:1"
+       id="rect1523"
+       width="127"
+       height="148.16667"
+       x="65.845818"
+       y="2.3458185"
+       transform="translate(0.30001694,0.30001459)" /><rect
        style="opacity:0.15;fill:#a4a4a4;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:0.94902"
        id="rect45272"
        width="39.688"
@@ -2958,7 +2965,7 @@
        inkscape:label="3DQPI"><tspan
          x="54.1875"
          y="42.175781"
-         id="tspan11057">3D QPI</tspan></text><text
+         id="tspan3711">3D QPI</tspan></text><text
        xml:space="preserve"
        transform="matrix(0.26458049,0,0,0.26458341,135.73776,-51.256644)"
        id="text3509-9-4-9"
@@ -2968,7 +2975,7 @@
        inkscape:label="3Draw"><tspan
          x="53.779297"
          y="261.20117"
-         id="tspan11059">Raw image</tspan></text><text
+         id="tspan3713">Raw image</tspan></text><text
        xml:space="preserve"
        transform="matrix(0.26456849,0,0,0.26458392,107.82815,-8.9234363)"
        id="text3509-9-6-30-7"
@@ -2978,4 +2985,4 @@
        inkscape:label="3Dmask"><tspan
          x="71.333984"
          y="261.20117"
-         id="tspan11061">Mask</tspan></text></g></svg>
+         id="tspan3715">Mask</tspan></text></g></svg>
