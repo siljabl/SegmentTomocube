@@ -1,7 +1,7 @@
 # Segmenting monolayers from 3D QPI
 Code to extract 2D height and refractive index fields from 3D QPI images of epithelial monolayers. 
 
-[github.pdf](https://github.com/user-attachments/files/29133622/github.pdf)
+![image description](figs/illustration.pdf)
 
 
 ## Used in:
